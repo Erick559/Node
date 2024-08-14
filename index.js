@@ -4,6 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors());
+app.use(express.json()); // This is needed to parse JSON bodies in POST requests
 
 app.get("/", (req, res) => res.type('html').send(`<!DOCTYPE html><p>Hello There</p></html>`));
 
